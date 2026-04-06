@@ -1,6 +1,6 @@
 import random
 
-print("===Jogo da Forca===")
+print("=== Jogo da Forca ===")
 
 palavra_secreta = "teste"
 letras_descobertas = ["_", "_", "_", "_", "_"]
@@ -10,7 +10,11 @@ while tentativas > 0:
     print("\nPalavra:", " ".join(letras_descobertas))
     print("Tentativas restantes:", tentativas)
 
-    letra = input("Digite uma letra: ")
+    letra = input("Digite uma letra: ").lower()
+
+    if len(letra) != 1 or not letra.isalpha():
+        print("Digite apenas uma letra válida.")
+        continue
 
     if letra in palavra_secreta:
         for i in range(len(palavra_secreta)):
