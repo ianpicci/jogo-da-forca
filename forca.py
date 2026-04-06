@@ -17,3 +17,8 @@ while True:
     else:
         print("Errou!")
 
+    if "_" not in letras_descobertas:
+        print("\nParabéns! Você venceu!")
+        print("A palavra era:", palavra_secreta)
+        break
+
