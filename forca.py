@@ -2,8 +2,10 @@ import random
 
 print("=== Jogo da Forca ===")
 
-palavra_secreta = "teste"
-letras_descobertas = ["_", "_", "_", "_", "_"]
+lista_palavras = ["python", "banana", "janela", "futebol", "cadeira"]
+palavra_secreta = random.choice(lista_palavras)
+
+letras_descobertas = ["_"] * len(palavra_secreta)
 tentativas = 6
 letras_tentadas = []
 
