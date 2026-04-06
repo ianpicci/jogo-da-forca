@@ -16,3 +16,13 @@ if letra in palavra_secreta:
   
 else:
   print("Errou!")
+
+palavra_mostrada = ""
+
+for caractere in palavra_secreta:
+  if caractere == letra:
+    palavra_mostrada += caractere
+  else:
+    palavra_mostrada += "_"
+
+print("Palavra:", palavra_mostrada)
