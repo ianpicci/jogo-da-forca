@@ -4,9 +4,12 @@ print("===Jogo da Forca===")
 
 palavra_secreta = "teste"
 letras_descobertas = ["_", "_", "_", "_", "_"]
+tentativas = 6
 
-while True:
+while tentativas > 0:
     print("\nPalavra:", " ".join(letras_descobertas))
+    print("Tentativas restantes:", tentativas)
+
     letra = input("Digite uma letra: ")
 
     if letra in palavra_secreta:
@@ -15,6 +18,7 @@ while True:
                 letras_descobertas[i] = letra
         print("Acertou!")
     else:
+        tentativas -= 1
         print("Errou!")
 
     if "_" not in letras_descobertas:
@@ -22,3 +26,6 @@ while True:
         print("A palavra era:", palavra_secreta)
         break
 
+if "_" in letras_descobertas:
+    print("\nQue pena! Você perdeu.")
+    print("A palavra era:", palavra_secreta)
